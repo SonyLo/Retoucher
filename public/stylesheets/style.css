@@ -1,0 +1,47 @@
+/* HEADER */
+.header_section{
+  height: 100vh;
+  min-height: 500px;
+ 
+  background: url('https://m1.35photo.pro/photos_main/664/3321792.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+
+ 
+  
+}
+
+/* .header_text{
+
+  position: absolute;
+  left: 30%;
+  top:40%;
+}
+
+
+.header_h1{
+  
+
+
+  font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.header_p{
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-top: 3rem;
+} */
+
+
+/* HEADER */
+
+/* PORTFOLIO */
+
+.portfolio_img{
+  width: 100%;
+  max-width: 280px;
+}
+/* PORTFOLIO */
