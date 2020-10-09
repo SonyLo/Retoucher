@@ -106,6 +106,29 @@ body{
   font-weight: 400;
   font-size: 1rem;
 }
+
+.portfolio-btn{
+  /*    width: 9rem;*/
+    background-color: #F69A73;
+      display: inline-block;
+      padding: 1rem 3rem;
+      border: 1px solid #fff;
+      border-radius: 40%;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      color: #fff;
+      font-size: 1rem;
+  }
+  
+  .portfolio-btn:hover{
+      color: #555;
+      background-color: #fff;
+      border: 1px solid #F69A73;
+  }
+
+
+
 /* PORTFOLIO */
 
 
@@ -147,6 +170,7 @@ body{
   margin: 50px auto 0;
   background: white;
   border-radius: 30px;
+  font-size: 1rem;
 }
 .form-left-decoration,
 .form-right-decoration {
@@ -235,31 +259,21 @@ body{
 
 
 /* FOOTER */
-footer{
-  background-color: #646464;
-  text-align: center;
+.footer{
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background: #646464;
+  text-align: center;
   color: #fff;
+  
  
 }
 
-
-
-.footer-btn{
-/*    width: 9rem;*/
-  display: inline-block;
-  padding: 1rem 3rem;
-  border: 1px solid #fff;
-  border-radius: 40%;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  
+.footer_hr{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.footer-btn:hover{
-  color: #555;
-  background-color: #fff;
-}
+
+
 /* FOOTER */
