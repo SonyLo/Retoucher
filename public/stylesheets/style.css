@@ -97,7 +97,8 @@ body{
 .portfolio_img{
   width: 100%;
   max-width: 90%;
-  max-height: 400px;
+  height: 100%;
+  max-height: 500px;
  
   
 }
@@ -370,3 +371,59 @@ span.talk:hover::after{
 }
 
 /* FOOTER */
+
+
+/* ADAPTIVE */
+@media (max-width:480px)
+{
+    html{
+        font-size: 8px;
+    } 
+}
+
+
+@media (max-width:1620px)
+{
+  .form_arrow{
+    position: absolute;
+    width: 300.77px;
+    height: 300.77px;
+  
+    left: 65%;
+    top: 40%;
+    transform: rotate(145.34deg);
+    z-index: 9999;
+  }
+}
+
+@media (max-width:1270px)
+{
+  .form_arrow{
+    position: absolute;
+    width: 300.77px;
+    height: 300.77px;
+  
+    left: 50%;
+    top: 40%;
+    transform: rotate(145.34deg);
+    z-index: 9999;
+  }
+  .decor {
+    position: relative;
+    max-width: 300px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 30px;
+    font-size: 1rem;
+  }
+
+}
+@media (max-width:1085px)
+{
+  .form_arrow{
+    
+    display: none;
+  }
+}
+
+/* ADAPTIVE */
