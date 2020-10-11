@@ -48,4 +48,20 @@ $(document).ready(function(){
 
   
 
+
+  function onclickFile(){
+    $('#file').trigger('click');
+  }
+
+
+ function sendForm(){
+  fileInput = document.getElementById('file');
+  fileInput.files.length;
+  console.log(fileInput.files.length)
+  console.log(fileInput.files[0].name)
+
+  //провеврку на то есть ли вообще файл, если есть - загребаем  
+
+ }
   
+ 

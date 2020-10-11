@@ -238,7 +238,7 @@ body{
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
 }
-.form-inner input[type="submit"] {
+.form-inner input[type="button"] {
   margin-top: 30px;
   background: #f69a73;
   border-bottom: 4px solid #d87d56;
@@ -424,6 +424,22 @@ span.talk:hover::after{
     
     display: none;
   }
+
+
+  .arrow-7 {
+    margin: 30px;
+    position: absolute;
+    left: 40%;
+    top: 80%;
+  }
+
+
+  .header_text{
+    padding-top: 40%;
+  }
+  
+
+
 }
 
 /* ADAPTIVE */

@@ -143,10 +143,11 @@
             <h3>Write to us</h3>
             <input type="text" placeholder="Username">
             <input type="email" placeholder="Email">
+            <input type="text" placeholder="File" onclick="onclickFile()">
 
-            <input class="d-none" type="file" placeholder="File">
+            <input name="file" id="file" class="d-none" type="file" placeholder="File">
             <textarea placeholder="Msg" rows="3"></textarea>
-            <input type="submit" value="Send">
+            <input type="button" value="Send" onclick="sendForm()">
           </div>
         </form>
       </div>
