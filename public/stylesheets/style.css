@@ -373,6 +373,16 @@ span.talk:hover::after{
 /* FOOTER */
 
 
+/* ADMIN PANEL */
+section#admin{
+  font-size: 1rem;
+}
+/* ADMIN PANEL */
+
+
+
+
+
 /* ADAPTIVE */
 @media (max-width:480px)
 {
