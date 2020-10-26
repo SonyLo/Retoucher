@@ -5,7 +5,7 @@ const Post = require('../models/Post')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'retoucher-anastasiya' });
 });
 
 
@@ -21,7 +21,12 @@ router.post('/addPost', (req, res)=>{
 
 
 router.get('/panel', function(req, res, next) {
-  res.render('panel', { title: 'Express' });
+  res.render('panel', { title: 'retoucher-anastasiya' });
 });
+
+router.get('/auth', function(req, res, next) {
+  res.render('auth', { title: 'LogIn' });
+});
+
 
 module.exports = router;
