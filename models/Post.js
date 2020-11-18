@@ -17,6 +17,7 @@ const  postsSchema = new Schema({
         type:Number,
         default: 0
      },
+     dateCreate: { type: Date, default: Date.now }
 
 
     

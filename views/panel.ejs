@@ -11,6 +11,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
@@ -60,11 +64,11 @@
                                 data-parent="#accordionExample">
                                 <div class="card-body">
                                    
-                                    <form>
+                                    <form  id="post_add"  method="post" enctype="multipart/form-data">
                                         <div class="form-row">
                                           <div class="form-group col-md-12">
                                             <label for="inputEmail4">Description for img</label>
-                                            <input type="text" class="form-control" id="inputEmail4" value="Available for retouching orders">
+                                            <input name="description" type="text" class="form-control" id="description" value="Available for retouching orders">
                                             <small id="emailHelp" class="form-text text-muted">Description text</small>
                                           </div>
                                           
@@ -73,13 +77,13 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="exampleFormControlFile1">Before retouching </label>
-                                                <input type="file" class="form-control-file"
-                                                    id="exampleFormControlFile1">
+                                                <input name="BeforeR" type="file" class="form-control-file"
+                                                    id="BeforeR">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="exampleFormControlFile1">After retouching</label>
-                                                <input type="file" class="form-control-file"
-                                                    id="exampleFormControlFile1">
+                                                <input name="AfterR" type="file" class="form-control-file"
+                                                    id="AfterR">
                                               </div>
                                             
                                           </div>
@@ -87,14 +91,14 @@
                                        
                                         <div class="form-group">
                                           <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <input name="isMainCheck" class="form-check-input" type="checkbox" id="isMainCheck">
                                             <label class="form-check-label" for="gridCheck">
                                                 Visible on main
                                                 page
                                             </label>
                                           </div>
                                         </div>
-                                        <button type="submit" class="btn btn-secondary">Create</button>
+                                        <button id="createPost" type="submit" submit class="btn btn-secondary">Create</button>
                                       </form>
 
 
@@ -123,7 +127,7 @@
                                                 </div>
                                                 <div class="form-group mx-sm-3 mb-2">
                                                   <label for="inputPassword2" class="sr-only">new src</label>
-                                                  <input type="password" class="form-control" id="inputPassword2" placeholder="new src">
+                                                  <input type="text" class="form-control" id="newLinkFB" placeholder="new src">
                                                 </div>
                                                 <button type="submit" class="btn btn-secondary mb-2">Change</button>
                                             </form>
@@ -136,7 +140,7 @@
                                                 </div>
                                                 <div class="form-group mx-sm-3 mb-2">
                                                   <label for="inputPassword2" class="sr-only">new src</label>
-                                                  <input type="password" class="form-control" id="inputPassword2" placeholder="new src">
+                                                  <input type="text" class="form-control" id="newLinkInst" placeholder="new src">
                                                 </div>
                                                 <button type="submit" class="btn btn-secondary mb-2">Change</button>
                                             </form>
@@ -152,7 +156,7 @@
                                                 </div>
                                                 <div class="form-group mx-sm-3 mb-2">
                                                   <label for="inputPassword2" class="sr-only">new src</label>
-                                                  <input type="password" class="form-control" id="inputPassword2" placeholder="new src">
+                                                  <input type="text" class="form-control" id="newLinkGmail" placeholder="new src">
                                                 </div>
                                                 <button type="submit" class="btn btn-secondary mb-2">Change</button>
                                             </form>
@@ -165,7 +169,7 @@
                                                 </div>
                                                 <div class="form-group mx-sm-3 mb-2">
                                                   <label for="inputPassword2" class="sr-only">new src</label>
-                                                  <input type="password" class="form-control" id="inputPassword2" placeholder="new src">
+                                                  <input type="text" class="form-control" id="newLinkBe" placeholder="new src">
                                                 </div>
                                                 <button type="submit" class="btn btn-secondary mb-2">Change</button>
                                             </form>
@@ -190,14 +194,31 @@
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                 data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
+                                    <table id="table_id" class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                         
+                                        </tbody>
+                                      </table>
                                 </div>
                             </div>
                         </div>
@@ -216,6 +237,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
     <script src="/js/main.js"></script>
 </body>
 

@@ -1,3 +1,5 @@
 module.exports = {
-    URL: "mongodb://su:uDmMZ9nR!m_ix5L@ds261096.mlab.com:61096/retoucher",
+     
+    URL: "mongodb+srv://retoucher_user:kYakH8r4Fggy2rZn@cluster0.jl5be.mongodb.net/Cluster0?retryWrites=true&w=majority"      
+
 }

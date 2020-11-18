@@ -63,5 +63,80 @@ $(document).ready(function(){
   //провеврку на то есть ли вообще файл, если есть - загребаем  
 
  }
+
+
+
+
+ $(document).ready( function () {
+  $('#table_id').DataTable();
+} );
   
+ 
+
+
+
+  
+
+
+
+
+
+$('#post_add').on('submit', function(e){
+  e.preventDefault()
+  alert("Hello")
+ 
+  var formData = new FormData( this)
+
+
+  // $.ajax({
+  //   type: 'POST',
+  //   url: '/addPost',
+  
+  //   data: JSON.stringify(
+  //       {
+  //           description: document.getElementById("description").value,
+  //           // typeContact: document.getElementById("typeContact").value,
+  //       }
+  //   ),//
+  //   contentType: "application/json; charset=utf-8",
+  //   dataType: "json",
+  
+  
+  //   // data:data,
+  //   processData:false,
+  //   // contentType:false,
+  //   success: function(r){
+  //       alert('Успешно добавлено!')
+  //       //document.location.href ='/panel'
+  //   },
+  //   error: function(er){
+  //       console.log(er);
+  //       alert('Упс, что то пошло не так')
+  //   }
+  // })
+
+
+
+
+   console.log(formData)
+ 
+  $.ajax({
+      type: 'POST',
+      url: '/addPost',
+      data:formData,
+      processData:false,
+      contentType:false,
+      success: function(r){
+          alert('Успешно добавлено!')
+          // document.location.href ='/panel'
+      },
+      error: function(er){
+          console.log(er);
+          alert('Упс, что то пошло не так')
+      }
+  })
+})
+
+
+
  
